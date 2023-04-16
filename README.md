@@ -20,7 +20,7 @@ The project aims to provide a safe and controlled environment for individuals wi
 # Conclusion:
 The development of a virtual reality-based supermarket has the potential to significantly improve the daily-living skills of individuals with ASD. The project will provide a safe and controlled environment for individuals with ASD to practice their skills and develop their independence. The project has the potential to make a significant impact on the lives of individuals with ASD and their families.
 
-#Tech stack 
+# Tech stack 
 Unity 3D
 Unity XR 
 Blender 
