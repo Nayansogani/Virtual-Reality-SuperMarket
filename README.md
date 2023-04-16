@@ -24,6 +24,17 @@ The development of a virtual reality-based supermarket has the potential to sign
 Unity 3D
 Unity XR 
 Blender 
+ # Steps to run the file
+1)Clone or download the project repository to your local machine.
+2)Open the project in Unity 3D game engine.
+3)Make sure that the VR headset is connected and configured with your computer.
+4)Navigate to the Scenes folder in the Unity Project panel and open the Supermarket scene.
+5)Press the Play button to run the simulation in Unity Editor mode.
+6)Put on the VR headset and enter the virtual supermarket simulation.
+
+Follow the instructions provided in the simulation to navigate the supermarket,
+[under development]
+select and purchase items, and interact with other virtual customers and staff.
 
 
 
