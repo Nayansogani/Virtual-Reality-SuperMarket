@@ -7,32 +7,40 @@ public class ObjectPicker : MonoBehaviour
 {
     public GameObject requiredObject;
     public AudioClip correctObjectSound;
+    public AudioClip incorrectObjectSound;
     private XRGrabInteractable grabInteractable;
-    private AudioSource audioSource;
+    private AudioSource[] audioSource;
 
     private void Start()
     {
         grabInteractable = GetComponent<XRGrabInteractable>();
         grabInteractable.onSelectEntered.AddListener(CheckObject);
-        audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponents<AudioSource>();
     }
 
     private void CheckObject(XRBaseInteractor interactor)
     {
         GameObject selectedObject = interactor.selectTarget.gameObject;
+        
         if (selectedObject == requiredObject)
         {
             Debug.Log("Object picked: " + selectedObject.name);
-            Debug.Log("AudioSource: " + GetComponent<AudioSource>());
+            Debug.Log("AudioSource: " + audioSource[0]);
+            Debug.Log("AudioSource: " + audioSource[1]);
             Debug.Log("AudioClip: " + correctObjectSound);
             if (correctObjectSound != null)
             {
                 
-                audioSource.PlayOneShot(correctObjectSound);
+                audioSource[0].PlayOneShot(correctObjectSound);
             }
         }
         else
         {
+            if (incorrectObjectSound != null)
+            {
+                
+                audioSource[1].PlayOneShot(incorrectObjectSound);
+            }
             Debug.Log("Wrong object picked");
         }
     }
